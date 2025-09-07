@@ -10,7 +10,7 @@
       --bg: #000;
       --ink: #fff;
       --muted: #ccc;
-      --radius: 20px;   /* 🔹 más suavidad en las puntas */
+      --radius: 20px;
     }
     *{ box-sizing:border-box; }
     body{ margin:0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height:1.6; }
@@ -29,21 +29,21 @@
     .resources{ display:flex; flex-direction:column; gap:60px; padding:60px 0; max-width:900px; margin:0 auto; }
     .resource-card{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; }
 
-    /* 🔹 Estilo de la imagen */
+    /* 🔹 Imagen con mejor estilo */
     .resource-logo img{ 
-      max-width: 350px;       /* tamaño controlado */
+      max-width: 250px;     /* más pequeña */
       width: 100%;
       height: auto;
       margin: 0 auto;
       display: block;
       border-radius: var(--radius);  /* bordes redondeados */
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* sombra sutil clara */
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* sombra sutil */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* 🔹 efecto al pasar el mouse */
+    /* efecto hover */
     .resource-logo img:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
       box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
     }
 
@@ -69,8 +69,10 @@
     <div class="resources">
       <div class="resource-card">
         <div class="resource-logo">
-          <!-- Imagen con nuevo estilo -->
-          <img src="img/12212.png" alt="Newsletter">
+          <!-- Imagen clickeable que redirige -->
+          <a href="https://mvathias.beehiiv.com">
+            <img src="img/12212.png" alt="Newsletter">
+          </a>
         </div>
         <div class="resource-content">
           <h3>Newsletter – Ideas Semanales</h3>
