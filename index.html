@@ -29,9 +29,9 @@
     .resources{ display:flex; flex-direction:column; gap:60px; padding:60px 0; max-width:900px; margin:0 auto; }
     .resource-card{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; }
 
-    /* 🔹 Imagen con mejor estilo */
+    /* Imagen con estilo y enlace */
     .resource-logo img{ 
-      max-width: 250px;     /* más pequeña */
+      max-width: 220px;     /* 🔹 más pequeña */
       width: 100%;
       height: auto;
       margin: 0 auto;
@@ -39,9 +39,8 @@
       border-radius: var(--radius);  /* bordes redondeados */
       box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* sombra sutil */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
     }
-
-    /* efecto hover */
     .resource-logo img:hover {
       transform: scale(1.05);
       box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
@@ -69,8 +68,8 @@
     <div class="resources">
       <div class="resource-card">
         <div class="resource-logo">
-          <!-- Imagen clickeable que redirige -->
-          <a href="https://mvathias.beehiiv.com">
+          <!-- Imagen clickeable -->
+          <a href="https://mvathias.beehiiv.com/">
             <img src="img/12212.png" alt="Newsletter">
           </a>
         </div>
