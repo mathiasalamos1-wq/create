@@ -10,7 +10,7 @@
       --bg: #000;
       --ink: #fff;
       --muted: #ccc;
-      --radius: 14px;
+      --radius: 20px;   /* 🔹 más suavidad en las puntas */
     }
     *{ box-sizing:border-box; }
     body{ margin:0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height:1.6; }
@@ -28,14 +28,25 @@
 
     .resources{ display:flex; flex-direction:column; gap:60px; padding:60px 0; max-width:900px; margin:0 auto; }
     .resource-card{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; }
-    .resource-logo{ display:inline-block; }
+
+    /* 🔹 Estilo de la imagen */
     .resource-logo img{ 
-      max-width: 300px;   /* 🔹 ancho máximo de la imagen */
-      width: 100%;        /* se adapta al contenedor */
-      height: auto;       /* mantiene la proporción */
-      margin: 0 auto;     /* centrado horizontal */
+      max-width: 350px;       /* tamaño controlado */
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
       display: block;
+      border-radius: var(--radius);  /* bordes redondeados */
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* sombra sutil clara */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    /* 🔹 efecto al pasar el mouse */
+    .resource-logo img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
+    }
+
     .resource-content h3{ margin:0 0 12px; font-size:1.4rem; font-weight:700; color:var(--ink); }
     .resource-content p{ margin:0 0 16px; color:var(--muted); max-width:700px; }
     .resource-link{ display:inline-block; font-weight:600; text-decoration:none; color:var(--ink); }
@@ -58,7 +69,7 @@
     <div class="resources">
       <div class="resource-card">
         <div class="resource-logo">
-          <!-- Imagen más pequeña y centrada -->
+          <!-- Imagen con nuevo estilo -->
           <img src="img/12212.png" alt="Newsletter">
         </div>
         <div class="resource-content">
@@ -103,6 +114,4 @@
   </script>
 </body>
 </html>
-
-
 
