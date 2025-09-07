@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minimalismo Mental</title>
+  <meta name="description" content="Página inspirada en justinwelsh.me, en esquema invertido: blanco por negro y negro por blanco, con secciones estilo destacadas." />
+  <style>
+    :root{
+      --bg: #000;
+      --ink: #fff;
+      --muted: #ccc;
+      --radius: 14px;
+    }
+    *{ box-sizing:border-box; }
+    body{ margin:0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height:1.6; }
+
+    .hero{ padding:100px 0; text-align:center; }
+    .hero h1{ font-size:clamp(2.5rem,6vw,4rem); margin:0 0 20px; animation: fadeInDown 1s ease; }
+    .hero h2{ font-size:1.8rem; font-weight:700; margin:10px 0; color:var(--ink); animation: fadeInUp 1.2s ease; }
+
+    @keyframes fadeInDown{
+      from{opacity:0; transform:translateY(-30px);} to{opacity:1; transform:translateY(0);}
+    }
+    @keyframes fadeInUp{
+      from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);}
+    }
+
+    .resources{ display:flex; flex-direction:column; gap:60px; padding:60px 0; max-width:900px; margin:0 auto; }
+    .resource-card{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; }
+    .resource-logo{ display:inline-block; }
+    .resource-logo img{ max-width:100%; border-radius:var(--radius); }
+    .resource-content h3{ margin:0 0 12px; font-size:1.4rem; font-weight:700; color:var(--ink); }
+    .resource-content p{ margin:0 0 16px; color:var(--muted); max-width:700px; }
+    .resource-link{ display:inline-block; font-weight:600; text-decoration:none; color:var(--ink); }
+    .resource-link:hover{ text-decoration:underline; }
+
+    footer{ padding:30px 0; text-align:center; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="container">
+      <h1>MINIMALISMO MENTAL</h1>
+      <h2>MÁS CLARIDAD</h2>
+      <h2>MENOS RUIDO</h2>
+    </div>
+  </section>
+
+  <!-- Sección de Recursos -->
+  <section>
+    <div class="resources">
+      <div class="resource-card">
+        <div class="resource-logo">
+          <!-- Inserta aquí tu imagen en Base64 -->
+          <img src="data:image/png;base64,PEGA_TU_IMAGEN_BASE64_AQUI" alt="Newsletter">
+        </div>
+        <div class="resource-content">
+          <h3>Newsletter – Ideas Semanales</h3>
+          <p>Recibe reflexiones exclusivas cada semana sobre claridad mental, productividad consciente y diseño de vida minimalista.</p>
+          <a class="resource-link" href="https://mvathias.beehiiv.com">Ir al Newsletter →</a>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-logo">RECURSO 2</div>
+        <div class="resource-content">
+          <h3>Recurso 2 – Cursos y Talleres</h3>
+          <p>Explora programas y talleres diseñados para ayudarte a profundizar en el minimalismo mental y alcanzar más foco.</p>
+          <a class="resource-link" href="#">Ver más →</a>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-logo">RECURSO 3</div>
+        <div class="resource-content">
+          <h3>Recurso 3 – Guías Prácticas</h3>
+          <p>Descubre materiales prácticos como ebooks y guías descargables que te ayudarán a implementar cambios reales en tu día a día.</p>
+          <a class="resource-link" href="#">Ver más →</a>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-logo">RECURSO 4</div>
+        <div class="resource-content">
+          <h3>Recurso 4 – Comunidad</h3>
+          <p>Conéctate con personas afines en un espacio dedicado a compartir aprendizajes, experiencias y apoyo mutuo.</p>
+          <a class="resource-link" href="#">Ver más →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Minimalismo Mental. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
