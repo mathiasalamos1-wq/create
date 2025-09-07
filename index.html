@@ -29,7 +29,13 @@
     .resources{ display:flex; flex-direction:column; gap:60px; padding:60px 0; max-width:900px; margin:0 auto; }
     .resource-card{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; }
     .resource-logo{ display:inline-block; }
-    .resource-logo img{ max-width:100%; border-radius:var(--radius); }
+    .resource-logo img{ 
+      max-width: 300px;   /* 🔹 ancho máximo de la imagen */
+      width: 100%;        /* se adapta al contenedor */
+      height: auto;       /* mantiene la proporción */
+      margin: 0 auto;     /* centrado horizontal */
+      display: block;
+    }
     .resource-content h3{ margin:0 0 12px; font-size:1.4rem; font-weight:700; color:var(--ink); }
     .resource-content p{ margin:0 0 16px; color:var(--muted); max-width:700px; }
     .resource-link{ display:inline-block; font-weight:600; text-decoration:none; color:var(--ink); }
@@ -52,7 +58,7 @@
     <div class="resources">
       <div class="resource-card">
         <div class="resource-logo">
-          <!-- Nueva imagen -->
+          <!-- Imagen más pequeña y centrada -->
           <img src="img/12212.png" alt="Newsletter">
         </div>
         <div class="resource-content">
@@ -97,5 +103,6 @@
   </script>
 </body>
 </html>
+
 
 
